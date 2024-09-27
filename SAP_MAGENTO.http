@@ -1,0 +1,6 @@
+@SAP_MAGENTO_HostAddress = http://localhost:5187
+
+GET {{SAP_MAGENTO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

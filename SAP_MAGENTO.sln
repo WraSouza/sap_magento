@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAP_MAGENTO", "SAP_MAGENTO.csproj", "{E16F7AB0-21C3-45E8-A57F-DB3B0FC9615B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E16F7AB0-21C3-45E8-A57F-DB3B0FC9615B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16F7AB0-21C3-45E8-A57F-DB3B0FC9615B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16F7AB0-21C3-45E8-A57F-DB3B0FC9615B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16F7AB0-21C3-45E8-A57F-DB3B0FC9615B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DECFC0DF-C3FE-427A-9753-2FDD74B6A6A8}
+	EndGlobalSection
+EndGlobal
