@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAP_MAGENTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90264299a59ebf672a49d173c5ca3f964be3c7e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAP_MAGENTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAP_MAGENTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

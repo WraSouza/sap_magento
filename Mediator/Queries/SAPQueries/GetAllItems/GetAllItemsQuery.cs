@@ -1,12 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MediatR;
+using SAP_MAGENTO.Models.SAPModels;
 
 namespace SAP_MAGENTO.Mediator.Queries.SAPQueries.GetAllItems
 {
-    public class GetAllItemsQuery
+    public class GetAllItemsQuery : IRequest<ItemSAP>
     {
-        
+        public string ItemCode { get; set; } = string.Empty;
+        public string CardName { get; set; } = string.Empty;
+        public string BarCode { get; set; } = string.Empty;
+        public string OnHand { get; set; } = string.Empty;
     }
 }

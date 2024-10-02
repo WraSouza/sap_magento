@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "oCInBSskHHz7YZGwOaGVy1iw4akQtEkugKj30bZLCZ4=",
+  "Source": "SAP_MAGENTO",
+  "BasePath": "_content/SAP_MAGENTO",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
