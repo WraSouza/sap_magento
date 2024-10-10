@@ -9,8 +9,7 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPItemsRepository
 {
     public class SAPItemsRepository(LoginHelper loginHelper) : ISAPItemsRepository
     {
-        readonly string url = "https://linux-7lxj:50000/b1s/v1/Items?$select=ItemCode,ItemName,BarCode,QuantityOnStock";
-       
+        readonly string url = "https://linux-7lxj:50000/b1s/v1/Items?$select=ItemCode,ItemName,BarCode,QuantityOnStock&$filter=startswith(ItemCode,'4')";       
         public async Task<ItemSAP> GetAllItemsSAPAsync()
         {
 
@@ -37,9 +36,27 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPItemsRepository
                 }
         }
 
-        public Task<ItemSAP> GetItemByIdAsync(string itemCode)
+        public async Task<Value> GetItemByIdAsync(string itemCode)
         {
-            throw new NotImplementedException();
+           HttpClientHandler clientHandler = new HttpClientHandler();
+                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }; 
+
+                TokenSAP token = await loginHelper.RealizarLogin();
+              
+                using (var client = new HttpClient(clientHandler))
+                {
+                     CookieContainer cookie = new CookieContainer();              
+
+                    client.DefaultRequestHeaders.Add("Cookie",$"B1SESSION={token.SessionId};ROUTEID=.node1");                   
+
+                    var responseLogin = client.GetAsync($"https://linux-7lxj:50000/b1s/v1/Items('{itemCode}')");
+
+                    string datasFromStore = await responseLogin.Result.Content.ReadAsStringAsync();
+
+                    Value? itens = JsonConvert.DeserializeObject<Value>(datasFromStore);
+
+                    return itens;
+                }
         }
     }
 }

@@ -10,6 +10,8 @@ namespace SAP_MAGENTO.Helpers
     public class LoginHelper(IOptions<LoginSAP> option, IMemoryCache memoryCache)
     {       
         private readonly string LOGIN_TOKEN = "SAPToken";
+        private string responseBody = string.Empty;  
+        
         public async Task<TokenSAP> RealizarLogin()
         {
             if(memoryCache.TryGetValue(LOGIN_TOKEN, out TokenSAP? tokenSAP))
@@ -20,9 +22,8 @@ namespace SAP_MAGENTO.Helpers
             TokenSAP? newResponse; 
 
             HttpClientHandler clientHandler = new HttpClientHandler();
-                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }; 
-
-            string responseBody = string.Empty;           
+            
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };                      
 
             var login = new LoginSAP( option.Value.UserName, option.Value.Password, option.Value.CompanyDB);           
 
@@ -42,10 +43,10 @@ namespace SAP_MAGENTO.Helpers
             var memoryCacheEntryOptions = new MemoryCacheEntryOptions
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1800),
-                SlidingExpiration = TimeSpan.FromSeconds(1000)
+                SlidingExpiration = TimeSpan.FromSeconds(1500)
             };
 
-             memoryCache.Set(LOGIN_TOKEN, newResponse);            
+             memoryCache.Set(LOGIN_TOKEN, newResponse,memoryCacheEntryOptions);            
                 
              return newResponse;
         }

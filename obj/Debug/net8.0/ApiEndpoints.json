@@ -1,0 +1,124 @@
+[
+  {
+    "ContainingType": "SAP_MAGENTO.Controllers.SAPControllers.BusinessPartnerController\u002B\u003C\u003Ec",
+    "Method": "\u003CBusinessPartnerEndpoint\u003Eb__0_0",
+    "RelativePath": "businesspartner",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.BusinessPartnerSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.BusinessPartnerSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "SAP - Business Partner"
+    ],
+    "EndpointName": "Get-BusinessPartner-SAP"
+  },
+  {
+    "ContainingType": "SAP_MAGENTO.Controllers.SAPControllers.BusinessPartnerController\u002B\u003C\u003Ec",
+    "Method": "\u003CBusinessPartnerEndpoint\u003Eb__0_1",
+    "RelativePath": "businesspartner",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.BusinessPartnerSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.BusinessPartnerSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "SAP - Business Partner"
+    ],
+    "EndpointName": "Post-BusinessPartner-SAP"
+  },
+  {
+    "ContainingType": "SAP_MAGENTO.Controllers.SAPControllers.ItemController\u002B\u003C\u003Ec",
+    "Method": "\u003CItemEndpoint\u003Eb__0_0",
+    "RelativePath": "item",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.ItemSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.ItemSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "SAP - Item"
+    ],
+    "EndpointName": "Get-Item-SAP"
+  },
+  {
+    "ContainingType": "SAP_MAGENTO.Controllers.SAPControllers.ItemController\u002B\u003C\u003Ec",
+    "Method": "\u003CItemEndpoint\u003Eb__0_1",
+    "RelativePath": "item/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.ItemSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "SAP_MAGENTO.Models.SAPModels.ItemSAP",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "SAP - Item"
+    ],
+    "EndpointName": "Get-ItemById-SAP"
+  }
+]
