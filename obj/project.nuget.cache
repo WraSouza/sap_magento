@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1zQrcfqIuWI=",
+  "dgSpecHash": "Sf5h/FMCYVQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\wladimir.souza\\Documents\\Projeto API SAP\\SAP_MAGENTO\\SAP_MAGENTO\\SAP_MAGENTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wladimir.souza\\.nuget\\packages\\coravel\\5.0.4\\coravel.5.0.4.nupkg.sha512",
+    "C:\\Users\\wladimir.souza\\.nuget\\packages\\flurl\\4.0.0\\flurl.4.0.0.nupkg.sha512",
+    "C:\\Users\\wladimir.souza\\.nuget\\packages\\flurl.http\\4.0.2\\flurl.http.4.0.2.nupkg.sha512",
     "C:\\Users\\wladimir.souza\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\wladimir.souza\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\wladimir.souza\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.8\\microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",

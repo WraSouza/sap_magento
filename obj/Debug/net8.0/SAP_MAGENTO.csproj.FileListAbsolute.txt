@@ -6,6 +6,8 @@ C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\De
 C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\SAP_MAGENTO.dll
 C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\SAP_MAGENTO.pdb
 C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\Coravel.dll
+C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\Flurl.dll
+C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\Flurl.Http.dll
 C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\MediatR.dll
 C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\wladimir.souza\Documents\Projeto API SAP\SAP_MAGENTO\SAP_MAGENTO\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll

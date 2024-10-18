@@ -16,24 +16,24 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPItemsRepository
              HttpClientHandler clientHandler = new HttpClientHandler();
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }; 
 
-                TokenSAP token = await loginHelper.RealizarLogin();
+                TokenSAP token = await loginHelper.RealizarLogin();                 
               
-                using (var client = new HttpClient(clientHandler))
-                {   
+                 using (var client = new HttpClient(clientHandler))
+                 {   
                 
-                    CookieContainer cookie = new CookieContainer();              
+                     CookieContainer cookie = new CookieContainer();              
 
-                    client.DefaultRequestHeaders.Add("Cookie",$"B1SESSION={token.SessionId};ROUTEID=.node1");                   
+                     client.DefaultRequestHeaders.Add("Cookie",$"B1SESSION={token.SessionId};ROUTEID=.node1");                   
 
-                    var responseLogin = client.GetAsync(url);
+                     var responseLogin = client.GetAsync(url);
 
-                    string datasFromStore = await responseLogin.Result.Content.ReadAsStringAsync();
+                     string datasFromStore = await responseLogin.Result.Content.ReadAsStringAsync();
 
-                    ItemSAP? itens = JsonConvert.DeserializeObject<ItemSAP>(datasFromStore);
+                     ItemSAP? itens = JsonConvert.DeserializeObject<ItemSAP>(datasFromStore);
 
-                    return itens;
+                     return itens;
                     
-                }
+                 }
         }
 
         public async Task<Value> GetItemByIdAsync(string itemCode)

@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Coravel" Version="5.0.4" />
+    <PackageReference Include="Flurl" Version="4.0.0" />
+    <PackageReference Include="Flurl.Http" Version="4.0.2" />
     <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

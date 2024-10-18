@@ -54,6 +54,14 @@
               "target": "Package",
               "version": "[5.0.4, )"
             },
+            "Flurl": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"

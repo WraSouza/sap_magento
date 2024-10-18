@@ -9,6 +9,8 @@
       "SAP_MAGENTO/1.0.0": {
         "dependencies": {
           "Coravel": "5.0.4",
+          "Flurl": "4.0.0",
+          "Flurl.Http": "4.0.2",
           "MediatR": "12.4.1",
           "Microsoft.AspNetCore.OpenApi": "8.0.8",
           "Newtonsoft.Json": "13.0.3",
@@ -36,6 +38,25 @@
           "lib/net6.0/Coravel.dll": {
             "assemblyVersion": "5.0.4.0",
             "fileVersion": "5.0.4.0"
+          }
+        }
+      },
+      "Flurl/4.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Flurl.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Flurl.Http/4.0.2": {
+        "dependencies": {
+          "Flurl": "4.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Flurl.Http.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.0.2.0"
           }
         }
       },
@@ -401,6 +422,20 @@
       "sha512": "sha512-Bp3G5tmJgTpTYAYB86OljIbNZb2qt5iByWLUMYUZGA/hccoavKg2SWl5gs29WcrlHn96DVA+O+9NUEjVq3nUng==",
       "path": "coravel/5.0.4",
       "hashPath": "coravel.5.0.4.nupkg.sha512"
+    },
+    "Flurl/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rpts69yYgvJqg6PPgqShBQEZ4aNzWQqWpWppcT0oDWxDCIsBqiod4pj6LQZdhk+1OozLFagemldMRACdHF3CsA==",
+      "path": "flurl/4.0.0",
+      "hashPath": "flurl.4.0.0.nupkg.sha512"
+    },
+    "Flurl.Http/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9vCqFFyceA11yplkFD8AbCFFTvG1Lrw3tpsgOpL5sLUc28p6zcvGszNleuT6nDymRvtt5eS+rqUX+bRztg1fhA==",
+      "path": "flurl.http/4.0.2",
+      "hashPath": "flurl.http.4.0.2.nupkg.sha512"
     },
     "MediatR/12.4.1": {
       "type": "package",

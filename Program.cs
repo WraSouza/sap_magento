@@ -1,7 +1,10 @@
 using System.Reflection;
+using SAP_MAGENTO.Controllers.MagentoControllers;
 using SAP_MAGENTO.Controllers.SAPControllers;
 using SAP_MAGENTO.Helpers;
 using SAP_MAGENTO.Models.SAPModels;
+using SAP_MAGENTO.Repositories.MagentoRepositories.MagentoOrdersRepository;
+using SAP_MAGENTO.Repositories.SAPRepositories.SAPBusinessPartnerRepository;
 using SAP_MAGENTO.Repositories.SAPRepositories.SAPItemsRepository;
 using SAP_MAGENTO.Repositories.SAPRepository.SAPItemRepository;
 
@@ -15,6 +18,9 @@ builder.Services.AddMemoryCache();
 builder.Services.Configure<LoginSAP>(builder.Configuration.GetSection("SAPLogin"));
 
 builder.Services.AddSingleton<ISAPItemsRepository, SAPItemsRepository>();
+builder.Services.AddSingleton<IMagentoOrdersRepository, MagentoOrdersRepository>();
+builder.Services.AddSingleton<IBusinessPartnerRepository, BusinessPartnerRepository>();
+
 builder.Services.AddSingleton<LoginSAP>();
 builder.Services.AddSingleton<LoginHelper>();
 
@@ -38,6 +44,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.MapGroup("")
+.OrderEndpoint()
+.WithTags("Magento - Orders");
 
 app.MapGroup("")
 .BusinessPartnerEndpoint()

@@ -1,11 +1,12 @@
+using MediatR;
+using SAP_MAGENTO.Models.MagentoModels;
+using static SAP_MAGENTO.Models.MagentoModels.OrdersResponse;
 
-
-namespace SAP_MAGENTO.Models.MagentoModels
+namespace SAP_MAGENTO.Mediator.Queries.MagentoQueries.GetAllOrders
 {
-    public class OrdersResponse
+    public class GetAllOrdersQuery : IRequest<List<Item>>
     {
-        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-    public class Address
+        public class Address
     {
         public string address_type { get; set; } = string.Empty;
         public string city { get; set; } = string.Empty;
@@ -13,7 +14,7 @@ namespace SAP_MAGENTO.Models.MagentoModels
         public string firstname { get; set; } = string.Empty;
         public string lastname { get; set; } = string.Empty;
         public string postcode { get; set; } = string.Empty;
-        public string region_code { get; set; } = string.Empty;
+        public string region { get; set; } = string.Empty;
         public List<string>? street { get; set; } 
         public string telephone { get; set; } = string.Empty;
         public string vat_id { get; set; } = string.Empty;
@@ -29,7 +30,6 @@ namespace SAP_MAGENTO.Models.MagentoModels
         public string status { get; set; } = string.Empty;       
         public List<Item>? items { get; set; }       
         public double? discount_invoiced { get; set; }
-        public Address? billing_address { get; set; }
         public double? total_paid { get; set; }
         public double base_price { get; set; }       
         public string name { get; set; } = string.Empty;       
@@ -40,6 +40,15 @@ namespace SAP_MAGENTO.Models.MagentoModels
         public double? subtotal_invoiced { get; set; }
   
     }
+
+    public class ParentItem
+    {            
+        public double base_original_price { get; set; }
+        public double base_price { get; set; }      
+        public int quote_item_id { get; set; }
+        public int row_invoiced { get; set; }           
+    }
+
 
     public class Root
     {
@@ -53,6 +62,5 @@ namespace SAP_MAGENTO.Models.MagentoModels
         public List<object>? filter_groups { get; set; }
         public int current_page { get; set; }
     }
-
     }
 }
