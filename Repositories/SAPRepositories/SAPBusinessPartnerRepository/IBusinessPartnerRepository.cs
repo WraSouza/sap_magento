@@ -11,7 +11,7 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPBusinessPartnerRepository
     {
         Task<List<BusinessPartnerSAP>> GetAllBusinessPartnerAsync();
         Task<BusinessPartnerSAP> GetBusinessPartnerSAPAsync(string cpf);
-        Task<bool> CreateBusinessPartnerSAPAsync(SAPBusinessPartner partnerSAP);
+        Task<SAPBusinessPartner> CreateBusinessPartnerSAPAsync(SAPBusinessPartner partnerSAP);
         
     }
 }

@@ -26,7 +26,7 @@ namespace SAP_MAGENTO.Mediator.Commands.SAPCommands.InsertBpCommand
        
     }  
 
-    public class SAPBusinessPartnerCommand : IRequest<Unit>
+    public class SAPBusinessPartnerCommand : IRequest<SAPBusinessPartner>
     {
             public SAPBusinessPartnerCommand( string cardName, string phone1, string emailAddress, List<BPFiscalTaxIDCollection>? bPFiscalTaxIDCollection, List<BPAddress>? bPAddresses)
             {                

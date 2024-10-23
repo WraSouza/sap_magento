@@ -12,7 +12,7 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPBusinessPartnerRepository
     {
         private readonly string urlBusinessPartner = "https://linux-7lxj:50000/b1s/v1/BusinessPartners";
 
-        public async Task<bool> CreateBusinessPartnerSAPAsync(SAPBusinessPartner partnerSAP)
+        public async Task<SAPBusinessPartner> CreateBusinessPartnerSAPAsync(SAPBusinessPartner partnerSAP)
         {
             bool resultado = false;
 
@@ -36,7 +36,7 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPBusinessPartnerRepository
                     var response = await client.PostAsync(urlBusinessPartner, content);
 
                     if(response.StatusCode == HttpStatusCode.OK)
-                    resultado = true;
+                    return partnerSAP;
                     
 
                 }catch(Exception ex)
@@ -44,7 +44,7 @@ namespace SAP_MAGENTO.Repositories.SAPRepositories.SAPBusinessPartnerRepository
                     Console.WriteLine(ex.Message);
                 }
 
-                return resultado;
+                return partnerSAP;
                  
              }
         }       
